@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="68.834008">
+<testcase classname="Login Feature" name="Login as a authenticated user" time="35.491388">
+<system-out><![CDATA[Given user is  on homepage..................................................passed
+When user navigates to Login Page...........................................passed
+And user enters username as "satish.ceb@gmail.com" and Password as "12345"..passed
+Then success message is displayed...........................................passed
+And Click on My WishLists...................................................passed
+Then LogoutApplication......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Feature" name="Login as a authenticated user 2" time="33.34262">
+<system-out><![CDATA[Given user is  on homepage..................................................passed
+When user navigates to Login Page...........................................passed
+And user enters username as "satish.ceb@gmail.com" and Password as "12345"..passed
+Then success message is displayed...........................................passed
+And Click on My Addresses...................................................passed
+Then LogoutApplication......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

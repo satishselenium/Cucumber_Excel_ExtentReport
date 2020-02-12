@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Automation Test Report" duration-ms="50334" started-at="2020-02-12T17:16:08Z" finished-at="2020-02-12T17:16:58Z">
+    <groups>
+    </groups>
+    <test name="Automation Test Report" duration-ms="50334" started-at="2020-02-12T17:16:08Z" finished-at="2020-02-12T17:16:58Z">
+      <class name="runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@60c6f5b]" name="setUpClass" is-config="true" duration-ms="254" started-at="2020-02-12T17:16:08Z" finished-at="2020-02-12T17:16:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@60c6f5b]" name="feature" duration-ms="49550" started-at="2020-02-12T17:16:09Z" data-provider="features" finished-at="2020-02-12T17:16:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Go To My Address"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["ExcelTry"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'SATISH', ip: '192.168.1.39', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_66'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'SATISH', ip: '192.168.1.39', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_66'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:291)
+at listener.ExtentReportListener.captureScreenShot(ExtentReportListener.java:110)
+at listener.ExtentReportListener.testStepHandle(ExtentReportListener.java:64)
+at seleniumgluecode.Test.Click_on_My_addresses(Test.java:169)
+at ✽.Click on My Addresses(Features/ExcelTry.feature:26)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@60c6f5b]" name="tearDownClass" is-config="true" duration-ms="16" started-at="2020-02-12T17:16:58Z" finished-at="2020-02-12T17:16:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Automation Test Report -->
+  </suite> <!-- Automation Test Report -->
+</testng-results>

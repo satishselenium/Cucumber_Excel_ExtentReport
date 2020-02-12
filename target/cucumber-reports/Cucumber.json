@@ -1,0 +1,70 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Login as a authenticated user",
+        "description": "",
+        "id": "login-feature;login-as-a-authenticated-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 27841309900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is  on homepage",
+            "match": {
+              "location": "Test.user_is_on_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7832273600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user navigates to Login Page",
+            "match": {
+              "location": "Test.user_navigates_to_Login_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12783211400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters username and Password",
+            "match": {
+              "location": "Test.user_enters_username_and_Password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 361350000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "success message is displayed",
+            "match": {
+              "location": "Test.success_message_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Feature",
+    "description": "Verify if user is able to Login in to the site",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "uri": "test.feature"
+  }
+]
