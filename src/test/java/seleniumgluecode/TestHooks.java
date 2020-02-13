@@ -4,9 +4,6 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import listener.ExtentReportListener;
-import utility.ExcelHandler;
-//import com.aventstack.extentreports.GherkinKeyword;
-//import com.aventstack.extentreports.gherkin.model.Scenario;
 
 public class TestHooks extends ExtentReportListener {
 	

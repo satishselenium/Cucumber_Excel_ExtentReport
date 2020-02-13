@@ -1,13 +1,14 @@
 package page;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+import org.openqa.selenium.support.FindBys;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+
 
 import driverfactory.BasePage;
 
@@ -28,6 +29,12 @@ public class LoginPage extends BasePage {
 	
 	@FindBy(xpath="//a[@class='logout']")
 	public WebElement Logout;
+	
+	@FindBy(xpath="//p[contains(text(),'There is 1 error')]")
+	public WebElement Error;
+	
+	@FindBys(@FindBy(xpath="//p[contains(text(),'There is 1 error')]"))
+	public List<WebElement> ErrorList;
 	
 	ExtentTest logInfo;
 	
@@ -52,8 +59,14 @@ public class LoginPage extends BasePage {
 		logInfo.info("44 came");
 		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		Submit.click();
-		logInfo.pass("47 came");
+		logInfo.pass("Submit button clicked");
 		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
+		if (isElementExist(ErrorList)) {
+			logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
+			logInfo.fail("login not successful---error");
+		}else {
+			logInfo.pass("login successful");
+		}
 	}
 	
 	

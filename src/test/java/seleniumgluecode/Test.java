@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -71,15 +69,8 @@ public class Test extends ExtentReportListener {  //public class Test extends Ba
 			LoginPage loginPage = new LoginPage(driver,logInfo) ;
 			PageFactory.initElements(driver,loginPage);
 			loginPage.login(username, password);
-			logInfo.pass("Logged in with User Name = "+username+ "  and Password = "+password);
-			logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
-			logInfo.info("61 line");
-			SessionId sessionid = ((ChromeDriver) driver).getSessionId();
-	        System.out.println("Session ID foo driver Test java class 78 = "+sessionid);
 		} catch (AssertionError | Exception e) {
 			System.out.println(e);
-			SessionId sessionid = ((ChromeDriver) driver).getSessionId();
-	        System.out.println("Session ID foo driver Test java class 82 = "+sessionid);
 			testStepHandle("FAIL",driver,logInfo,e);
 		}
 	}

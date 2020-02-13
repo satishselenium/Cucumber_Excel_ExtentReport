@@ -72,7 +72,8 @@ public class ExcelHandler extends BaseTest {
     	Map<String, String> data = new HashMap<String, String>();
     	data.clear();
     	
-    	boolean testcasefound = false,Headerfound=false;
+    	@SuppressWarnings("unused")
+		boolean testcasefound = false,Headerfound=false;
     	for (int i =0;i<=TotalRow-1;i++) {
     		if (!(getCellData(i,0)==null)) {
     			if (getCellData(i,0).equalsIgnoreCase(TestCaseId)) {

@@ -1,11 +1,10 @@
 package driverfactory;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.SessionId;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
@@ -21,11 +20,7 @@ public class BaseTest {
 			//System.setProperty("webdriver.gecko.driver","/Users/Documents/geckodriver");
 			System.setProperty("webdriver.chrome.driver",".\\WebDriver\\chromedriver.exe");
 	        driver = new ChromeDriver();
-	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	        
-	        SessionId sessionid = ((ChromeDriver) driver).getSessionId();
-	        System.out.println("Session ID fro driver in base test = "+sessionid);
-	       
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	       
 		}else {
 			System.out.println(" we dont have other browser setup as of now");
 		}
@@ -36,6 +31,16 @@ public class BaseTest {
 			//System.setProperty("webdriver.gecko.driver","/Users/Documents/geckodriver");
 			 driver.get(URL);
 		     driver.manage().window().maximize();
+	}
+	
+	
+	public boolean isElementExist(List<WebElement> errorList) {
+		int size = errorList.size();
+		if (size>0) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	
